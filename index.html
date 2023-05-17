@@ -116,20 +116,16 @@
 				</div>
 				<div class="container subbody">
 					<!-- BOLD CAPS -->
-					<header>
-						<h2 class="heading2">Data Overview</h2>
-					</header>
+					<!--<header>
+						<h2 class="heading2">Data Exploration</h2>
+					</header>-->
 					<!-- UNDERLINE -->
-					<h3>Finding the size and shape of the dataframe</h3>
+					<h3>Data Overview and Preprocessing</h3>
 					<!-- BODY -->
-					<p>The dataframe has a total of 150 rows and 8 columns. To get this value, the .shape attribute was used on the imported dataframe. Its result is then printed to the console.</p>
-					<h3>Column Description</h3>
-					<p>The dataframe (initially) has 8 columns:</p>
-					<ul>
-						<li><b>Account type:</b> Can either be 'anonymous' or 'identified' depending on the prevalence of the twitter user’s real name. This data is qualitative in nature. It belongs to the nominal data level because there is no natural order for this identifier, and only serves as a label.</li>
-						<li><b>Followers:</b> The follower count of the twitter user. This data is quantitative in nature. It belongs to the ratio data level because it has a meaningful zero point (having no followers), and performing ratio-based calculations is possible (for instance, finding the ratio of followers between one user to another).</li>
-						<li><b>Tweet:</b> The tweet of the twitter user. Similar to the “Account type” column, this data is qualitative in nature. It belongs to the nominal data level because there is no natural order for this identifier. And meaningful mathematical operations are obviously not performable on this data.</li>
-					</ul>
+					<p>The following Google Collaboratory file shows how the tweet dataset was preprocessed and analyzed by the data science group using Python.</p>
+					<script src="https://gist.github.com/ajogerio/6ab4ecacf05adbf18271edaaa0ed583c.js"></script>
+					<h3>Data Visualization</h3>
+					<p>From the preprocessed data, the frequency of the categories were plotted. The chi square test was also implemented to check for the distribution of the categorical</p>
 					<pre>
 					<code>
 print("kumusta mundo q")
