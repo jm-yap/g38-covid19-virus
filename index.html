@@ -79,16 +79,16 @@
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>Hypothesis</h3>
-								<p>Claims about the government's fabrication of the COVID-19 virus contributes most to Filipinos' belief that the COVID-19 virus is not real.</p>
+								<span class="icon solid featured fa-camera-retro"></span>
+								<h3>Null Hypothesis</h3>
+								<p>The false claims about COVID-19 are equally likely to contribute to Filipino's disbelief in the virus.</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Null Hypothesis</h3>
-								<p>False claims about the existence of the COVID-19 virus are equally likely to contribute to Filipinos' belief that the COVID-19 virus is not real.</p>
+								<span class="icon featured fa-comments"></span>
+								<h3>Alternative Hypothesis</h3>
+								<p>Certain false claims about COVID-19 have a greater likelihood of contributing to Filipino's disbelief in the virus compared to others.</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
@@ -111,20 +111,43 @@
 				<div class="container">
 					<header>
 						<h1 class="heading1">Data Exploration</h1>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<p>We mined the internet for fake news data. Now, we analyze!</p>
 					</header>
 				</div>
 				<div class="container subbody">
 					<header>
 						<h2 class="heading2">Data Overview and Preprocessing</h2>
 					</header>
-					<p>The following Google Collaboratory file shows how the tweet dataset was preprocessed and analyzed by the data science group using Python.</p>
+					<h3>Google Colaboratory File</h3>
+					<p>The following Google Colaboratory file shows how the tweet dataset was preprocessed and analyzed by the data science group using Python.</p>
 					<script src="https://gist.github.com/ajogerio/5f7f62cc205afd631d271d8700af27ff.js"></script>
+					<br>
+					<h3>Categorical Data Encoding</h3>
+					<ol>
+						<li><b>Get the most common categories</b></li>
+						<p>In Google Sheets, pivot table was applied to the dataframe to summarize and analyze data quickly and efficiently. In the pivot table editor, the column “False Claim” was dragged into the "Rows" section of the pivot table editor which groups the data by category. The same category column was dragged into the "Values" section which counts the occurrences of each category. Then sort the resulting table in descending order to get the most common categories in the top rows. (Refer to the “False Claim” sheet to see the most common categories)
+						</p>
+						<li><b>Count content types per category</b></li>
+						<p>In the pivot table editor, the column “False Claim” and “Content Type” were dragged into the "Rows" section of the pivot table editor which groups the data by category. The same category column “Content Type” was dragged into the "Values" section which counts the occurrences of each category. (Refer to the “Content Type” sheet for the count of content types per category)</p>
+						<li><b>Get most common tweet type per category</b></li>
+						<p>In the pivot table editor, the column “False Claim” and “Tweet Type” were dragged into the "Rows" section of the pivot table editor which groups the data by category. The same category column “Tweet Type” was dragged into the "Values" section which counts the occurrences of each category. (Refer to the “Tweet Type” sheet for the most common tweet types per category)</p>
+						<li><b>Get the highest count of likes, replies, and retweets per category</b></li>
+						<p>Apply a filter to the table containing the columns “Like”, “Replies”, “Retweets”, and “False Claims”. Sort the table in descending order and filter the category you want to view to get the highest count of likes, replies, and retweets per category in the top row. (Refer to the “Likes, Replies, and Retweets” sheet to see the highest count of likes, replies, and retweets per category)</p>
+						<li><b>Get most influential account type per category</b></li>
+						<p>Apply a filter to the table containing the columns “Account Type”, “Followers”, and “False Claims”. Sort the table in descending order and filter the category you want to view to see the most influential account type per category in the top row. (Refer to the “Account Type” sheet to see the most influential account type per category)</p>
+					</ol>
 					<hr>
 					<header>
 						<h2 class="heading2">Data Visualization</h2>
 					</header>
-					<p>From the preprocessed data, the frequency of the categories were plotted.</p>
+					<p>From the preprocessed data, the frequency of the categories were plotted. The following graphs were produced:</p>
+
+					<ol>
+						<li><b>Bar graph</b></li>
+						<p>Select the pivot table then click "Insert" to add a bar graph to your sheet, which will dynamically update as you modify the data or pivot table.</p>
+						<li><b>Interactive plot</b></li>
+						<p>Via Google Sheets, add a slicer in the pivot table. Select a value from the slicer, and the pivot table and any associated graphs will update dynamically based on the selected value. This allows you to interactively explore different subsets of data and see corresponding changes in the graph.</p>
+					</ol>
 
 					<iframe src="https://docs.google.com/spreadsheets/d/1XZiK94nXsJ5PD13YTf3OsnUzYGJVky6sTcVGIVoSNVE/edit#gid=1156280267&fvid=1963906383" width = "100%" height = "700px"></iframe>
 					<hr>
